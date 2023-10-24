@@ -1,3 +1,4 @@
+import './topBox.scss';
 import { topDealUsers } from '../../data';
 
 const TopBox = () => {
