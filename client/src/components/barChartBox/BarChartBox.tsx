@@ -1,5 +1,6 @@
-import './barChartBox.scss';
 import { Bar, BarChart, ResponsiveContainer, Tooltip } from 'recharts';
+
+import './barChartBox.scss';
 
 type Props = {
     color: string;
