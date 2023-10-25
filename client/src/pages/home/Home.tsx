@@ -1,10 +1,10 @@
-import './home.scss';
 import TopBox from '../../components/topBox/TopBox';
 import ChartBox from '../../components/chartBox/ChartBox';
 import PieChartBox from '../../components/pieChartBox/PieChartBox';
-
+import BigChartBox from '../../components/bigChartBox/BigChartBox';
 import { chartBoxConversion, chartBoxProduct, chartBoxRevenue, chartBoxUser } from '../../data';
 
+import './home.scss';
 
 const Home = () => {
     return (
@@ -28,6 +28,7 @@ const Home = () => {
                 <ChartBox {...chartBoxConversion} />
             </div>
             <div className="box box7">
+                <BigChartBox />
             </div>
             <div className="box box8">
             </div>
