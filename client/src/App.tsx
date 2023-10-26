@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 
 import Home from './pages/home/Home';
+import Users from './pages/users/Users';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Menu from './components/menu/Menu';
@@ -31,6 +32,7 @@ function App() {
         {
             path: '/', element: <Layout />, children: [
                 { path: '/', element: <Home /> },
+                { path: '/users', element: <Users /> },
             ]
         },
     ]);
