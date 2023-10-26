@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { menu } from '../../data';
 
+import './menu.scss';
+
 const Menu = () => {
     return (
         <div className="menu">
