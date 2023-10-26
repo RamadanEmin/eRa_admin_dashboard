@@ -1,13 +1,14 @@
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-
 import Home from './pages/home/Home';
 import Users from './pages/users/Users';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Menu from './components/menu/Menu';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import './styles/global.scss';
 
+const queryClient = new QueryClient();
 
 function App() {
 
@@ -20,7 +21,9 @@ function App() {
                         <Menu />
                     </div>
                     <div className="contentContainer">
-                        <Outlet />
+                        <QueryClientProvider client={queryClient}>
+                            <Outlet />
+                        </QueryClientProvider>
                     </div>
                 </div>
                 <Footer />
