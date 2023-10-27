@@ -157,6 +157,12 @@ app.get("/api/users", (req, res) => {
   res.json(users);
 });
 
+// ADD USER
+app.post("/api/users", (req, res) => {
+  users.unshift(req.body)
+  res.json(users);
+});
+
 app.listen(8800, () => {
   console.log("Connected to backend.");
 });
