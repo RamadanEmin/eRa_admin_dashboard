@@ -163,6 +163,12 @@ app.post("/api/users", (req, res) => {
   res.json(users);
 });
 
+// DELETE USER
+app.delete("/api/users/:id", (req, res) => {
+  users = users.filter((user) => user.id !== parseInt(req.params.id));
+  res.json("User deleted!");
+});
+
 app.listen(8800, () => {
   console.log("Connected to backend.");
 });
