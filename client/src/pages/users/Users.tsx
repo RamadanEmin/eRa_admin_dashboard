@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { GridColDef } from '@mui/x-data-grid';
 import { useQuery } from '@tanstack/react-query';
+import DataTable from '../../components/dataTable/DataTable';
 
 import './users.scss';
 
@@ -72,7 +73,7 @@ const Users = () => {
             {isLoading ? (
                 "Loading..."
             ) : (
-                <DataTable />
+                <DataTable slug="users" columns={columns} rows={data} />
             )}
             {open && <Add />}
         </div>
